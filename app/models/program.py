@@ -16,5 +16,15 @@ class Program(db.Model):
     # Relationships
     projects = db.relationship("Project", back_populates="program")
 
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'name': self.name,
+            'description': self.description,
+            'national_alignment': self.national_alignment,
+            'focus_areas': self.focus_areas,
+            'phases': self.phases
+        }
+
     def __repr__(self):
         return f"<Program {self.name}>"

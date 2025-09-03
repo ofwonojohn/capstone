@@ -18,5 +18,16 @@ class Facility(db.Model):
     equipment = db.relationship("Equipment", back_populates="facility")
     projects = db.relationship("Project", back_populates="facility")
 
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'name': self.name,
+            'location': self.location,
+            'description': self.description,
+            'partner_org': self.partner_org,
+            'facility_type': self.facility_type,
+            'capabilities': self.capabilities
+        }
+
     def __repr__(self):
         return f"<Facility {self.name}>"

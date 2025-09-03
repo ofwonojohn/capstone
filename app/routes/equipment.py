@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify
-from controllers.equipment_controller import EquipmentController
+from app.controllers.equipment_controller import EquipmentController
 
 equipment_bp = Blueprint('equipment', __name__)
 controller = EquipmentController()

@@ -1,6 +1,6 @@
 from flask import jsonify
-from models.equipment import Equipment
-from models.facility import Facility
+from app.models.equipment import Equipment
+from app.models.facility import Facility
 from database import db
 
 class EquipmentController:

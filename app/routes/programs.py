@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify
-from controllers.program_controller import ProgramController
+from app.controllers.program_controller import ProgramController
 
 programs_bp = Blueprint('programs', __name__)
 controller = ProgramController()

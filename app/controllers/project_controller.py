@@ -1,10 +1,10 @@
 from flask import jsonify
-from models.project import Project
-from models.program import Program
-from models.facility import Facility
-from models.participant import Participant
-from models.project_participant import ProjectParticipant
-from models.outcome import Outcome
+from app.models.project import Project
+from app.models.program import Program
+from app.models.facility import Facility
+from app.models.participant import Participant
+from app.models.project_participant import ProjectParticipant
+from app.models.outcome import Outcome
 from database import db
 
 class ProjectController:

@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify, send_file
-from controllers.outcome_controller import OutcomeController
+from app.controllers.outcome_controller import OutcomeController
 from werkzeug.utils import secure_filename
 import os
 

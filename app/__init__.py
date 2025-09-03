@@ -16,13 +16,27 @@ def create_app():
     db.init_app(app)
     
     #BLUEPRINTS
-    from app.routes.auth import auth_bp
-    from app.routes.api import api_bp
+    # from app.routes.auth import auth_bp  # Ignored for Month 1 deliverables
+    # from app.routes.api import api_bp  # Ignored for Month 1 deliverables
     from app.routes.main import main_bp
+    from app.routes.programs import programs_bp
+    from app.routes.facilities import facilities_bp
+    from app.routes.services import services_bp
+    from app.routes.equipment import equipment_bp
+    from app.routes.projects import projects_bp
+    from app.routes.participants import participants_bp
+    from app.routes.outcomes import outcomes_bp
 
-    app.register_blueprint(auth_bp)
-    app.register_blueprint(api_bp)
+    # app.register_blueprint(auth_bp)  # Ignored for Month 1 deliverables
+    # app.register_blueprint(api_bp)  # Ignored for Month 1 deliverables
     app.register_blueprint(main_bp)
+    app.register_blueprint(programs_bp, url_prefix='/api/programs')
+    app.register_blueprint(facilities_bp, url_prefix='/api/facilities')
+    app.register_blueprint(services_bp, url_prefix='/api/services')
+    app.register_blueprint(equipment_bp, url_prefix='/api/equipment')
+    app.register_blueprint(projects_bp, url_prefix='/api/projects')
+    app.register_blueprint(participants_bp, url_prefix='/api/participants')
+    app.register_blueprint(outcomes_bp, url_prefix='/api/outcomes')
 
     with app.app_context():
         db.create_all()

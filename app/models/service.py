@@ -16,5 +16,15 @@ class Service(db.Model):
     # Relationships
     facility = db.relationship("Facility", back_populates="services")
 
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'facility_id': self.facility_id,
+            'name': self.name,
+            'description': self.description,
+            'category': self.category,
+            'skill_type': self.skill_type
+        }
+
     def __repr__(self):
         return f"<Service {self.name}>"

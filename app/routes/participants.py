@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify
-from controllers.participant_controller import ParticipantController
+from app.controllers.participant_controller import ParticipantController
 
 participants_bp = Blueprint('participants', __name__)
 controller = ParticipantController()

@@ -1,6 +1,6 @@
 from flask import jsonify
-from models.outcome import Outcome
-from models.project import Project
+from app.models.outcome import Outcome
+from app.models.project import Project
 from database import db
 import os
 

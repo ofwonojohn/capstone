@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify
-from controllers.project_controller import ProjectController
+from app.controllers.project_controller import ProjectController
 
 projects_bp = Blueprint('projects', __name__)
 controller = ProjectController()

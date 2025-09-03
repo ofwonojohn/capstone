@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify
-from controllers.facility_controller import FacilityController
+from app.controllers.facility_controller import FacilityController
 
 facilities_bp = Blueprint('facilities', __name__)
 controller = FacilityController()
